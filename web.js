@@ -3,10 +3,6 @@ var fs = require('fs');
 
 var app = express.createServer(express.logger());
 var outString = '';
-//var buf = new Buffer(5000);
-//app.get('/', function(request, response) {
-//  response.send('Hello World2!');
-//});
 var buf = new Buffer(fs.readFileSync('index.html'), "utf-8");
 outString = buf.toString('ascii');
 console.log(outString);
